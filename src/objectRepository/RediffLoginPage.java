@@ -13,6 +13,7 @@ public class RediffLoginPage {
 	By userNameInput = By.id("login1");
 	By passwordInput = By.id("password");
 	By goButton = By.name("proceed");
+	By homeLink = By.cssSelector(".rediff-com a");
 	
 	public WebElement UserNameInput() {
 		return driver.findElement(userNameInput);
@@ -24,6 +25,10 @@ public class RediffLoginPage {
 	
 	public WebElement GoButton() {
 		return driver.findElement(goButton);
+	}
+	
+	public WebElement HomeLink() {
+		return driver.findElement(homeLink);
 	}
 	
 }

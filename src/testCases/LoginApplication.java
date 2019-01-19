@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import objectRepository.RediffHomePage;
 import objectRepository.RediffLoginPage;
 
 public class LoginApplication {
@@ -17,6 +18,11 @@ public class LoginApplication {
 		rlp.UserNameInput().sendKeys("username");
 		rlp.PasswordInput().sendKeys("password");
 		rlp.GoButton().click();
+		rlp.HomeLink().click();
+		RediffHomePage rhp = new RediffHomePage(driver);
+		rhp.SearchLink().click();
+		rhp.SearchInput().sendKeys("search");
+		rhp.SearchButton().click();
 	}
 	
 }
